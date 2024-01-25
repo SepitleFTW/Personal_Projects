@@ -50,7 +50,7 @@ def signin(request):
             aut.login(request, user)
             return redirect("/")
         else:
-            messages.infor(request, "Credentials are invalid")
+            messages.info(request, "Credentials are invalid")
             return redirect("signin")
     else:
         return render(request,'signin.html')
