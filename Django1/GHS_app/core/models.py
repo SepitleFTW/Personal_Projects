@@ -5,5 +5,5 @@ class Profile(models.Model):
     user = pass
     id_user = pass
     bio = pass
-    profileimg = models.ImageField(upload_to='profile_images', default='OPI.jpeg')
+    profileimg = models.ImageField(upload_to='profile_images', default='BPP.png')
     location = pass
