@@ -14,7 +14,7 @@ def signup(request):
         email = request.POST['email']
 
         if User.objects.filter(email=email).exists():
-            messages.ifno(request, "This email is already in use")
+            messages.info(request, "This email is already in use")
             return redirect("signup")
 
         elif User.objects.filter(username=username).exists():
@@ -25,9 +25,6 @@ def signup(request):
             user = User.objects.create_user(username=username, password=password, email=email)
             user.save()
 
-
-
-        Profile.objects.create(username=username, password=password, email=email, first_name=first_name, last_name=last_name)
 
         return render(request,'signup.html')
     else:
