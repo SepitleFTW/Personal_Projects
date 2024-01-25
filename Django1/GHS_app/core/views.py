@@ -5,4 +5,17 @@ def index(request):
     return render(request, 'index.html')
 
 def signup(request):
-    return render(request,'signup.html')
+
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        email = request.POST['email']
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+
+        Profile.objects.create(username=username, password=password, email=email, first_name=first_name, last_name=last_name)
+
+        return render(request,'signup.html')
+    else:
+
+        return render(request,'signup.html')
