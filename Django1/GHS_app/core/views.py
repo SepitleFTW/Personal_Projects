@@ -25,6 +25,7 @@ def signup(request):
             user = User.objects.create_user(username=username, password=password, email=email)
             user.save()
 
+            #
 
         return render(request,'signup.html')
     else:
