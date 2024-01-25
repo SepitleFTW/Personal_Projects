@@ -25,7 +25,10 @@ def signup(request):
             user = User.objects.create_user(username=username, password=password, email=email)
             user.save()
 
-            #
+            #log user in and send them to settings
+
+            #create profile object for the new user
+            user_model = User.objects.get(username=username)
 
         return render(request,'signup.html')
     else:
