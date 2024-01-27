@@ -18,14 +18,14 @@ def display_text(stdscr, target, current, wpm=0):
         correct_char = target[i]
         color = curses.color_pair(1)
         if char != correct_char:
-            color - curses.color_pair(2)
+            color = curses.color_pair(2)
 
             stdscr.addstr(0, i, char, color)
 
 def load_text():
     with open("text.txt", "r") as f:
         lines = f.readlines()
-        return random.choices(lines).strip()
+        return random.choice(lines).strip()
 
 def wpm_test(stdscr):
     target_text = load_text()
@@ -39,7 +39,7 @@ def wpm_test(stdscr):
         wpm = round(len(current_text)) / (time_elapsed / 60)
 
         stdscr.clear()
-        display_text(stdscr, target_text, currrent_text, wpm)
+        display_text(stdscr, target_text, current_text, wpm)
         stdscr.refresh()
 
         if "".join(current_text) == target_text:
