@@ -47,7 +47,7 @@ def wpm_test(stdscr):
             break
 
         try:
-            key = stdsc.getkey()
+            key = stdscr.getkey()
 
         except:
             continue
@@ -70,7 +70,7 @@ def main(stdscr):
     while True:
         wpm_test(stdscr)
         stdscr.addstr(2, 0, "YOu completed the text! Press any key to continue")
-        key = stdscr.getline()
+        key = stdscr.getkey()
 
         if ord(key) == 27:
             break
