@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../../136067402"
+		},
+		{
+			"path": "../Django1"
+		}
+	],
+	"settings": {
+		"gitdoc.enabled": true,
+		"workbench.tree.renderIndentGuides": "always",
+		"files.associations": {
+			"stdio.h": "c"
+		}
+	}
+}
