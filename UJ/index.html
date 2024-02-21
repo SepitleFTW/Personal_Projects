@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <section class="header animate">
+        <section class="header animation">
            <nav>
                 <a href="index.html"><img src="images/UJ logo.jpg"></a>
                 <div class="nav-links" id="navLinks">
@@ -33,7 +33,7 @@
             </div>
         </section>
 
-        <section class="Culture animate">
+        <section class="Culture animation">
             <h1>Student-Athlete Culture</h1>
             <p>
                 UJ Rowing Club was established in 2005 and aims to provide student-rowers with the best opportunities to unlock their potential of becoming national and world-class rowers. The Club has a well-established record of producing rowers that continue from University into representing Senior National Rowing Teams.
@@ -60,7 +60,7 @@
             </div>
         </section>
 
-        <section class="noob animate">
+        <section class="noob animation">
             <h1>Regattas</h1>
             <p id="ussa"></p>
 
@@ -87,13 +87,19 @@
             </div>
         </section>
 
-        <section class="infos animate">
-            <!-- Your existing code -->
+        <section class="infos animation">
+            <h1>Keen to row for us<br>Click the button below</h1>
+            <a href="" class="hero-btn">CONTACT US</a>
         </section>
 
-        <section class="footer animate">
-          <h1>Keen to row for us<br>Click the button below</h1>
-            <a href="" class="hero-btn">CONTACT US</a>
+        <section class="footer">
+            <h4>About Us</h4>
+            <p>UJ Rowing Club was established in 2005 and aims to provide student-rowers<br>with the best opportunities to unlock their potential<br> of becoming national and world-class rowers.<br>The Club has a well-established record of producing rowers that continue from University into representing Senior National Rowing Teams.
+            </p>
+            <div class="icons">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
         </section>
 
         <script>
@@ -104,29 +110,6 @@
             function hideMenu() {
                 navLinks.style.right = "-200px";
             }
-
-	    function checkScroll() {
-    var animatedElements = document.querySelectorAll('.animate');
-
-    animatedElements.forEach(function(element) {
-        if (isElementInViewport(element)) {
-            element.classList.add('fade-in');
-        }
-    });
-}
-
-function isElementInViewport(el) {
-    var rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-window.addEventListener('scroll', checkScroll);
-
         </script>
     </body>
 </html>
