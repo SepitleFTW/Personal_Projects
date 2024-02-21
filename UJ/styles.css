@@ -1,0 +1,277 @@
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Header Section */
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/B8.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+nav {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    display: flex;
+    align-items: center;
+}
+
+nav img {
+    width: 80px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.nav-links ul {
+    list-style: none;
+}
+
+.nav-links ul li {
+    margin: 10px 0;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+    color: orange;
+}
+
+/* Hero Section */
+.text-box {
+    width: 90%;
+    color: #fff;
+    max-width: 600px;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 12px 34px;
+    font-size: 16px;
+    background: transparent;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.hero-btn:hover {
+    background: #fff;
+    color: #333;
+}
+
+/* Culture Section */
+.Culture {
+    padding: 50px 20px;
+}
+
+.Culture h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.Culture p {
+    color: #777;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.speed {
+    flex: 1 1 30%;
+    background: #ffcc99;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.speed:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.speed h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Noob Section */
+.noob {
+    padding: 50px 20px;
+    position: relative;
+}
+
+.ussa-row {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.ussa-row img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.ussa-row:hover img {
+    transform: scale(1.05);
+}
+
+.layer {
+    background: rgba(226,0,0,0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ussa-row:hover .layer {
+    opacity: 1;
+}
+
+.layer h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+/* Infos Section */
+.infos {
+    padding: 100px 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/moosclays.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.infos h1 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.infos .hero-btn {
+    margin-top: 40px;
+}
+
+/* Footer Section */
+.footer {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer h4 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.icons .fa {
+    color: #f44336;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.icons .fa:hover {
+    color: orange;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav {
+        top: 5%;
+        left: 5%;
+    }
+
+    .text-box h1 {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        text-align: center;
+        z-index: 999;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    nav .fa {
+        display: block;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .speed {
+        flex: 1 1 100%;
+    }
+
+    .footer {
+        padding: 30px 20px;
+    }
+
+    .footer h4 {
+        font-size: 20px;
+    }
+
+    .icons .fa {
+        font-size: 20px;
+    }
+}
