@@ -1,0 +1,15 @@
+{
+  "name": "regatta_results2.0",
+  "version": "1.0.0",
+  "description": "For this project I want to add a simple chatbot\r to the regattaresults website that will make it easier for people to retrieve specific results\r .\r Users will prompt the chatbot for a specific race ex, \"JM14B sculls\" , and the chatbot\r will either direct them to the link for that specific result or open it for them.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9"
+  }
+}
