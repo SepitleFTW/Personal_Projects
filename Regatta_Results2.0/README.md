@@ -9,3 +9,5 @@ These are what I will be using
 - Any IDE of choice lmao
 - Python for the chatbot logic
 - Node.js for frontend chatbot widget
+
+-Web scrapping regattaresults, lol not usre if legal-
