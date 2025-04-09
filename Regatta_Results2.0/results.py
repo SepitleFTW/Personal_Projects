@@ -27,5 +27,7 @@ def results_scrape():
 
 if __name__ == "__main__":
     results_scrape()
+
     print("Results scraped successfully.")
     # This will print the scraped data to the console
+    
